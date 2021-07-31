@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onur Şen</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
+    <link  rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <div id="app">
+        <header> Classını ve Style özelliklerini yaz </header>
+        <div class="row"> 
+            <div class="col-md-12">
+                <div class="row text-center">
+                    <div class="col-6">
+                        <label for=""> Class </label>
+                        <br>
+                        <textarea name="class_text_area" id="" cols="20" rows="5" v-model="class_data"></textarea>
+                    </div>
+                    <div class="col-6">
+                        <label for=""> Css</label>
+                        <br>
+
+                        <textarea name="class_text_area" id="" cols="20" rows="5" v-model = "style_data"></textarea>
+
+                    </div>
+                    
+                </div>
+
+                <div class="text-center">
+                    <button :class="class_data" :style="style_data"> Button </button>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
