@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Dislike app</title>
+    
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <header>Like Dislike App</header>
+        
+        <div class="ml-4 mr-4 d-flex justify-content-center align-items-center">
+            <input type="text"  v-model="textContent_data"/>
+            <button @click="add">Add</button>
+        </div>
+        <br/>
+
+        <div class="row mb-4" v-for="item in data" :key="item.id">
+            <div class="col box">
+                <h5 class="text-center">{{ item.textContent }} </h5>
+                <button class="btn btn-danger btn-sm" @click="removeItem(item)">Remove Item</button>
+                <div class="float-right">
+                    <button class="like_button btn btn-success btn-sm" @click="item.like++;">Like ({{item.like}})</button>
+                    <button class="dislike_button btn btn-danger btn-sm" @click="item.dislike++;">Dislike ({{item.dislike}})</button>
+
+                </div>
+            </div>
+        </div>
+        
+
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
