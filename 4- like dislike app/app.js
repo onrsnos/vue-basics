@@ -13,6 +13,7 @@ const app = Vue.createApp({
 
         }
     },
+    
     methods:{
         add(){
             console.log("1")
